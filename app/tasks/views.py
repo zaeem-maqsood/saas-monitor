@@ -33,7 +33,7 @@ def cpu_usage_view(request):
 class CpuStressView(View):
 
     start_time = None
-    duration = 30  # seconds
+    duration = 60  # seconds
 
     # The CPU stress function
     def fib(self, n):
@@ -84,7 +84,7 @@ def memory_usage_view(request):
 class MemoryStressView(View):
 
     start_time = None
-    duration = 30  # seconds
+    duration = 60  # seconds
     allocation_size = 500 * 10**6  # 500 MB, adjust as needed
     max_memory = 2 * 10**9  # 2GB
     # This will keep track of the total memory used across all processes

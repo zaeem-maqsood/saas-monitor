@@ -19,7 +19,7 @@ CPU Load Test
     <div class="row justify-content-md-center">
         <div class="col-md-6 col-lg-6 align-items-center">
             <button class="btn btn-success" id="startButton">Start Load</button>
-            <span id="timer" style="margin-left: 10px;">30</span> <!-- Added span element for timer -->
+            <span id="timer" style="margin-left: 10px;">60</span> <!-- Added span element for timer -->
             <br>
             <span id="testInProgress" style="margin-left: 10px;"></span>
         </div>
@@ -36,7 +36,7 @@ CPU Load Test
     startButton.addEventListener("click", function() {
         // Disable the start button immediately to prevent multiple clicks
         startButton.disabled = true;
-        startTimer(30); // Start the timer with 30 seconds
+        startTimer(60); // Start the timer with 30 seconds
 
 
         fetch('{% url 'cpu_stress' %}?action=start')
@@ -66,7 +66,7 @@ CPU Load Test
 
             if (time <= 0) {
                 clearInterval(countdown); // Clear the interval when time reaches zero
-                timerElement.textContent = "30"; // Clear the timer text or you can display 'Time's up!' or something similar
+                timerElement.textContent = "60"; // Clear the timer text or you can display 'Time's up!' or something similar
             }
         }, 1000); // Update the timer every second
     }

@@ -45,7 +45,6 @@ services:
       - DD_SITE=datadoghq.com  # Defaults to 'datadoghq.com'. Customers outside North America should use their correct Datadog Domain
       - DD_APM_ENABLED=true    # Enable APM
       - DD_REMOTE_CONFIGURATION_ENABLED=${DD_REMOTE_CONFIGURATION_ENABLED}
-      - DD_SERVICE=${DD_SERVICE}
       - DD_ENV=${DD_ENV}
     volumes: 
       - /var/run/docker.sock:/var/run/docker.sock:ro 
